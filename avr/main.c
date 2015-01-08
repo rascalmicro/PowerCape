@@ -94,6 +94,7 @@ void watchdog_check( void )
             watchdog_reset();
             registers_set( REG_WDT_POWER, 0 );
             registers_set( REG_WDT_STOP, 0 );
+            registers_set( REG_WDT_RESET, 90); // Start the timer over at 90 in case the first reboot doesn't work.
         }
     }
     
